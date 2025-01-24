@@ -1,0 +1,1 @@
+import{_ as n,t,v as c,z as _,K as a}from"./COcSDptW.js";const f={};function d(e,o){return t(),c("h4",null,"Header")}const l=n(f,[["render",d]]),u={};function p(e,o){return t(),c("h4",null,"footer")}const m=n(u,[["render",p]]),i={};function x(e,o){const r=l,s=m;return t(),c("div",null,[_(r),a(e.$slots,"default"),_(s)])}const $=n(i,[["render",x]]);export{$ as default};
