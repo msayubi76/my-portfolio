@@ -3,15 +3,18 @@
 </script>
 
 <template>
-    <h5>Home page</h5>
+    <div class="container">
+        <About />
+        <Services />
+        <Skills />
 
-    <About />
-    <Services />
-    <Skills />
-    <Projects />
+        <EstimateYourProject />
 
-    <WorkWith />
+        <Projects />
 
-    <Contact />
+        <WorkWith />
+
+        <Contact />
+    </div>
 
 </template>

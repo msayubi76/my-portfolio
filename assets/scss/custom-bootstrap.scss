@@ -1,0 +1,72 @@
+// assets/scss/custom-bootstrap.scss
+
+// Step 1: Override Bootstrap variables BEFORE importing Bootstrap's SCSS
+$primary: #f26b50; // Change the primary color
+$secondary: #6c757d; // Example: Override secondary color
+$success: #28a745; // Example: Override success color
+$dark: #222222;
+$body-bg: #1f1f1f;
+$navbar-dark-active-color: #f26b50;
+$headings-color: #fff;
+// Step 2: Import Bootstrap SCSS
+@import "bootstrap/scss/bootstrap";
+
+.title-line {
+    background: $primary;
+    height: 2px;
+    width: 70px;
+    margin: 14px 20px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 90px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 80px solid #2f2f2f; /* Semi-transparent */
+    transform: rotate(-20deg); /* Adjust the angle as needed */
+    /* position: absolute; */
+    top: 20px; /* Adjust positioning */
+    left: 20px;
+}
+
+.circle {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: blue;
+    margin: 0 auto;
+}
+
+.font-48 {
+    font-size: 48px;
+}
+
+.experience {
+    font-size: 48px;
+    line-height: 36px;
+}
+.exp-text {
+    line-height: 21px;
+}
+
+.laravel-triangle {
+    width: 0px;
+    height: 0px;
+    border-bottom: 260px solid $primary;
+    border-left: 345px solid transparent;
+}
+.laravel-box {
+    position: absolute;
+    top: 0;
+    width: 325px;
+    height: 243px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+ 
+.estimate-project{
+    margin-bottom: -104px;
+}
+.projects-section{
+    padding-top: 130px !important;
+}
