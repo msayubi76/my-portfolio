@@ -10,6 +10,7 @@
         </h2>
         <p>
             <img  src="/images/linkedin.png"/>
+            
         </p>
 
         
