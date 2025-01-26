@@ -63,10 +63,16 @@ $headings-color: #fff;
     height: 243px;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
- 
-.estimate-project{
+
+.estimate-project {
     margin-bottom: -104px;
 }
-.projects-section{
+.projects-section {
     padding-top: 130px !important;
+}
+
+.about-top {
+    position: absolute;
+    left: 10%;
+    top: 15%;
 }

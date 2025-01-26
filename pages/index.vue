@@ -4,17 +4,27 @@
 
 <template>
     <div class="container">
-        <About />
-        <Services />
-        <Skills />
+        <div >
+            <About />
+        </div>
+        <div id="services-section">
+            <Services />
+        </div>
+        <div id="skills-section">
+            <Skills />
+            <EstimateYourProject />
+        </div>
+        <div id="projects-section">
+            <Projects />
+        </div>
+        <div id="contact-section">
 
-        <EstimateYourProject />
+            <WorkWith />
 
-        <Projects />
 
-        <WorkWith />
-
-        <Contact />
+            <Contact />
+        </div>
     </div>
+
 
 </template>

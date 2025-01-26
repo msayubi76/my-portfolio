@@ -1,23 +1,29 @@
 <template>
-    <div class="row pt-3 bg-dark">
+    <div class="row pt-3 bg-dark" id="top-section">
         <div class="col-md-8">
 
             <div class="about-image ">
-                <div>
-                    <h2 class="text-center">Salah-ud-Din</h2>
-                    <h3 class="text-center">Islamabad, Pakistan</h3>
+                <div class="about-top">
+                    <h2>Salah-ud-Din</h2>
+                    <h3 >Islamabad, Pakistan</h3>
+                    <ul class="text-light">
+                        <li>🚀 Transforming Ideas into Scalable Web Solutions</li>
+                        <li>💻 Experienced in Laravel, Vue.js, AWS, and API development</li>
+                        <li> 🏆 Dedicated to delivering clean, efficient, and robust solutions</li>
+                    </ul>
+                    
                 </div>
                 <div class="name-image">
                     <div class="row">
                         <div class="col-5">
                             <ul class="list-group list-group-horizontal position-absolute bottom-0">
                                 <li class="list-group-item border-0 py-0 px-1 ps-0">
-                                    <a href="">
+                                    <a href="https://www.linkedin.com/in/msayubi76/" target="_blank" title="LinkedIn">
                                         <img src="/images/linkedin.png" alt="" height="22px">
                                     </a>
                                 </li>
                                 <li class="list-group-item border-0 py-0 px-1">
-                                    <a href="">
+                                    <a href="https://stackoverflow.com/users/10255904/msayubi76" target="_blank" title="Stack Overflow">
                                         <img src="/images/stack-overflow.png" alt="" height="22px">
                                     </a>
                                 </li>
@@ -42,17 +48,17 @@
             </div>
             <div class="d-flex mt-5">
                 <div class="text-primary">
-                    <u>Full Stack Web Engineer</u>
+                    <u>Full Stack Web Developer</u>
                 </div>
                 <div class="title-line"></div>
             </div>
             <div>
                 <h3>
-                    Based in Islamabad, Pakistan I'm Full Stack Web Developer
+                    Full-Stack Web Developer | Laravel & Vue.js Specialist
                 </h3>
-                <p class="text-light">It's certainly no way to get noticed in today's marketplace. Quality content
-                    marketing is what it
-                    takes to make a modern brand truly shine.</p>
+                <p class="text-light">I design and develop scalable, high-performance web applications using the latest
+                    technologies. Passionate about writing clean, efficient code and delivering seamless user
+                    experiences.</p>
 
                 <p class="mb-0">
                     <a href="tel:923437239678">P: +92 (343) 723-9678</a>
@@ -67,7 +73,7 @@
         </div>
     </div>
 
-    <div class="row py-5">
+    <div class="row py-5" id="about-section">
         <div class="col-lg-6 col-md-6 col-12">
             <div class="d-flex">
                 <div class="text-primary">About Me</div>
@@ -75,14 +81,14 @@
                 </div>
             </div>
             <h4>
-                You can't use up creativity. The more you use, the more you have in your signifant mind.
+                Empowering businesses with secure and scalable web applications.
             </h4>
             <p class="text-light text-opacity-75">
                 <small>
-                    Does any industry face a more complex audience journey and marketing sales process than 828 technology?
-                Consider the number of people who influence a sale, the length of the decision-making cycle, the
-                competing intorests of the people who purchase, implement, manage, and use the technology, it's a lot
-                meaningful content here
+                    Hi, a Full-Stack Web Developer with 6+ years of experience in building modern,
+                    scalable web applications. My expertise in Laravel, Vue.js/Nuxt.js, AWS, and RESTful APIs allows me
+                    to create secure, high-performance solutions for businesses. I focus on clean code, seamless user
+                    experiences, and efficient project execution. Let's bring your ideas to life!
                 </small>
             </p>
             <div class="d-flex">
@@ -99,11 +105,11 @@
         </div>
         <div class="col-lg-6 col-md-6 col-12">
             <div>
-                <h3>Any Type Of Query
-                    <br>& Discussion.
+                <h3>Have a Project in Mind or <br> a Query?
+
                 </h3>
                 <p class="text-light">
-                    Let's talk with me
+                    Let’s Connect and Discuss Your Ideas!
                 </p>
             </div>
             <div class="pt-5">
