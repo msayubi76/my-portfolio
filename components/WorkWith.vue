@@ -19,27 +19,27 @@
 const companiess = ref([
     {
         name: 'Digital Code',
-        image: '/images/digital-code.svg'
+        image: './images/digital-code.svg'
     },
     {
         name: 'Signup Solution',
-        image: '/images/signup-solution.svg'
+        image: './images/signup-solution.svg'
     },
     {
         name: 'Procurosis',
-        image: '/images/procurosis.png'
+        image: './images/procurosis.png'
     },
     {
         name: 'Global Gateway',
-        image: '/images/ggateway.png'
+        image: './images/ggateway.png'
     },
     {
         name: 'Ikonami Technologies',
-        image: '/images/ikonami.webp'
+        image: './images/ikonami.webp'
     },
     {
         name: 'Zeeapp Solutions',
-        image: '/images/zeeapp.png'
+        image: './images/zeeapp.png'
     }
 ])
 

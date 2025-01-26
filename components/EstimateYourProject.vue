@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-8 mx-auto">
                 <div class="position-relative">
-                    <div style="background-image: url('/images/team-work.jpg'); height: 184px;
+                    <div style="background-image: url('./images/team-work.jpg'); height: 184px;
     opacity: 0.3;
     background-size: cover;
     background-repeat: no-repeat;">
