@@ -9,22 +9,22 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active  px-3" aria-current="page" href="#top-section">Home</a>
+                        <NuxtLink class="nav-link active  px-3" aria-current="page" href="/#top-section">Home</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  px-3" href="#about-section">About</a>
+                        <NuxtLink class="nav-link  px-3" href="/#about-section">About</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  px-3" href="#services-section">Services</a>
+                        <NuxtLink class="nav-link  px-3" href="/#services-section">Services</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  px-3" href="#skills-section">Skills</a>
+                        <NuxtLink class="nav-link  px-3" href="/#skills-section">Skills</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  px-3" href="#projects-section">Projects</a>
+                        <NuxtLink class="nav-link  px-3" href="/#projects-section">Projects</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  px-3    " href="#contact-section">Contact</a>
+                        <NuxtLink class="nav-link  px-3    " href="/#contact-section">Contact</NuxtLink>
                     </li>
 
                 </ul>

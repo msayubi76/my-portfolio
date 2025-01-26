@@ -9,19 +9,19 @@
         <ClientOnly>
             <swiper-container ref="containerRef">
                 <swiper-slide v-for="(project, index) in projects" :key="index">
-                    <!-- <img :src="project.image" class="img-fluid" /> -->
-                    <NuxtImg :src="project.image" class="img-fluid" />
+                    <div class="py-3 px-2 pb-1 bg-black rounded-3">
+                        <NuxtLink :href="project.link" class="text-decoration-none">
+                            <p class="text-light text-opacity-75">
+                                {{ project.description }}
+                            </p>
 
-                    <h4 class="font-bold text-light">{{ project.name }}</h4>
+                            <img :src="project.image" class="img-fluid" />
+                        </NuxtLink>
+                        <h4 class="font-bold text-light text-center py-3">{{ project.name }}</h4>
+                    </div>
                 </swiper-slide>
             </swiper-container>
         </ClientOnly>
-        <!-- <div class="row mt-5">
-            <div class="col-4 mb-3" v-for="(project, index) in projects" :key="index">
-                <img :src="project.image" class="img-fluid" />
-                <h4 class="font-bold text-light">{{ project.name }}</h4>
-            </div>
-        </div> -->
     </section>
 
 </template>
@@ -31,49 +31,50 @@
 
 const projects = ref([
     {
-        name: 'VueJs/NuxtJs',
-        image: './images/project.png'
+        name: 'Crypto Exchange Platform',
+        image: './images/project.png',
+        link: '/projects/crypto-exchange-platform',
+        description: "A full-featured crypto exchange platform developed  using Nuxt.js and Ant Design. Key features include P2P trading, spot/margin/futures trading, internal transfers, and decentralized deposits/withdrawals."
     },
     {
-        name: 'Laravel',
-        image: './images/project.png'
+        name: 'PlutoPakistan',
+        image: './images/project.png',
+        link: '/projects/pluto-pakistan',
+        description: "Multivendor ecommerce platform  developed using Laravel, jQuery, and Nuxt 3. Key features include multi-payment options, return/refund processing, and a robust commission system for vendors and admin."
     },
     {
-        name: 'Aws',
-        image: './images/project.png'
+        name: 'Jdm Trading',
+        image: './images/project.png',
+
+        link: '/projects/jdm-trading',
+        description: null
     },
     {
-        name: 'MySql',
-        image: './images/project.png'
+        name: 'Sign of Style',
+        image: './images/project.png',
+
+        link: '/projects/sign-of-style',
+        description: null
     },
     {
-        name: 'Git',
-        image: './images/project.png'
+        name: 'E-Procurement',
+        image: './images/project.png',
+        link: '/projects/e-procurement',
+        description: null
     },
     {
-        name: 'JQuery',
-        image: './images/project.png'
+        name: 'School Management',
+        image: './images/project.png',
+        link: '/projects/school-management',
+        description: null
     },
     {
-        name: 'Linux-Shell',
-        image: './images/project.png'
+        name: 'Currency Exchange (Finanspan)',
+        image: './images/project.png',
+        link: '/projects/finanspan',
+        description: null
     },
-    {
-        name: 'Restfull Api',
-        image: './images/project.png'
-    },
-    {
-        name: 'Bootstrap',
-        image: './images/project.png'
-    },
-    {
-        name: 'Scss',
-        image: './images/project.png'
-    },
-    {
-        name: 'Sass',
-        image: './images/project.png'
-    },
+
 ])
 
 
