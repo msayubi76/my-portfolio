@@ -28,6 +28,11 @@
 
 <script setup lang="ts">
 
+import { defineAsyncComponent, ref, onMounted } from 'vue'
+
+const SwiperContainer = defineAsyncComponent(() => import('swiper/vue').then(m => m.Swiper))
+const SwiperSlide = defineAsyncComponent(() => import('swiper/vue').then(m => m.SwiperSlide))
+
 
 const projects = ref([
     {
@@ -43,23 +48,22 @@ const projects = ref([
         description: "Multivendor ecommerce platform  developed using Laravel, jQuery, and Nuxt 3. Key features include multi-payment options, return/refund processing, and a robust commission system for vendors and admin."
     },
     {
+        name: 'E-Procurement',
+        image: './images/project.png',
+        link: '/projects/e-procurement',
+        description: null
+    },
+    {
         name: 'Jdm Trading',
         image: './images/project.png',
-
         link: '/projects/jdm-trading',
-        description: null
+        description: "A car stock management platform built with Laravel, jQuery, and Bootstrap 5. Features include stock status labels, an admin panel for managing inventory, expenses, sales, and dynamic content."
     },
     {
         name: 'Sign of Style',
         image: './images/project.png',
 
         link: '/projects/sign-of-style',
-        description: null
-    },
-    {
-        name: 'E-Procurement',
-        image: './images/project.png',
-        link: '/projects/e-procurement',
         description: null
     },
     {
