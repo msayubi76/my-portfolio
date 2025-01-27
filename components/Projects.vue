@@ -51,20 +51,13 @@ const projects = ref([
         name: 'E-Procurement',
         image: './images/project.png',
         link: '/projects/e-procurement',
-        description: null
+        description: "Developed an E-Procurement Platform using Laravel and Vue.js. Key features include quotation management, vendor analysis, purchase order generation, and a built-in messaging system for seamless communication."
     },
     {
         name: 'Jdm Trading',
         image: './images/project.png',
         link: '/projects/jdm-trading',
         description: "A car stock management platform built with Laravel, jQuery, and Bootstrap 5. Features include stock status labels, an admin panel for managing inventory, expenses, sales, and dynamic content."
-    },
-    {
-        name: 'Sign of Style',
-        image: './images/project.png',
-
-        link: '/projects/sign-of-style',
-        description: null
     },
     {
         name: 'School Management',
@@ -77,8 +70,7 @@ const projects = ref([
         image: './images/project.png',
         link: '/projects/finanspan',
         description: null
-    },
-
+    }
 ])
 
 
