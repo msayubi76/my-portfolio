@@ -5,8 +5,23 @@
         </h3>
         <h2 class="text-center">Projects I've Worked On </h2>
 
+        <div class="row">
+            <div class="col-md-4 mb-2" v-for="(project, index) in projects" :key="index">
+                <div class="py-3 px-2 pb-1 bg-black rounded-3">
+                    <NuxtLink :href="project.link" class="text-decoration-none">
+                        <p class="text-light text-opacity-75">
+                            {{ project.description }}
+                        </p>
 
-        <ClientOnly>
+                        <img :src="project.image" class="img-fluid" />
+                    </NuxtLink>
+                    <h4 class="font-bold text-light text-center py-3">{{ project.name }}</h4>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- <ClientOnly>
             <swiper-container ref="containerRef">
                 <swiper-slide v-for="(project, index) in projects" :key="index">
                     <div class="py-3 px-2 pb-1 bg-black rounded-3">
@@ -21,17 +36,12 @@
                     </div>
                 </swiper-slide>
             </swiper-container>
-        </ClientOnly>
+        </ClientOnly> -->
     </section>
 
 </template>
 
 <script setup lang="ts">
-
-import { defineAsyncComponent, ref, onMounted } from 'vue'
-
-const SwiperContainer = defineAsyncComponent(() => import('swiper/vue').then(m => m.Swiper))
-const SwiperSlide = defineAsyncComponent(() => import('swiper/vue').then(m => m.SwiperSlide))
 
 
 const projects = ref([
@@ -65,12 +75,6 @@ const projects = ref([
         link: '/projects/school-management',
         description: null
     },
-    {
-        name: 'Currency Exchange (Finanspan)',
-        image: './images/project.png',
-        link: '/projects/finanspan',
-        description: null
-    }
 ])
 
 

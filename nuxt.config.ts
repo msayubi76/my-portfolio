@@ -18,5 +18,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["nuxt-swiper", "@nuxt/image"],
+  modules: ["nuxt-swiper"],
 });
