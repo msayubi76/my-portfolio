@@ -1,13 +1,13 @@
 <template>
-    <section class="py-4 mt-4">
-        <h3 class="text-primary text-center">
+    <section class="py-4 mt-4" id="work-with">
+        <h4 class="text-primary text-center">
             <u>Worked With</u>
-        </h3>
-        
+        </h4>
+
 
         <div class="row mt-5">
-            <div class="col-4 mb-3" v-for="(company, index) in companiess" :key="index">
-                <img  :src="company.image" height="40px" style="    filter: grayscale(93%);"/>
+            <div class="col-md-4 col-6 mb-3 " v-for="(company, index) in companiess" :key="index">
+                <img :src="company.image" height="40px" style="    filter: grayscale(93%);" />
             </div>
         </div>
     </section>

@@ -1,34 +1,34 @@
 <template>
-    <div class="row pt-3 bg-dark" id="top-section">
+    <div class="row pt-md-3 bg-dark" id="top-section">
         <div class="col-md-8">
 
             <div class="about-image ">
                 <div class="about-top">
                     <h2>Salah-ud-Din</h2>
-                    <h3 >Islamabad, Pakistan</h3>
+                    <h3>Islamabad, Pakistan</h3>
                     <ul class="text-light">
                         <li>🚀 Transforming Ideas into Scalable Web Solutions</li>
                         <li>💻 Experienced in Laravel, Vue.js, AWS, and API development</li>
                         <li> 🏆 Dedicated to delivering clean, efficient, and robust solutions</li>
                     </ul>
-                    
+
                 </div>
                 <div class="name-image">
-                    <div class="row">
-                        <div class="col-5">
-                            <ul class="list-group list-group-horizontal position-absolute bottom-0">
-                                <li class="list-group-item border-0 py-0 px-1 ps-0">
-                                    <a href="https://www.linkedin.com/in/msayubi76/" target="_blank" title="LinkedIn">
-                                        <img src="/images/linkedin.png" alt="" height="22px">
-                                    </a>
-                                </li>
-                                <li class="list-group-item border-0 py-0 px-1">
-                                    <a href="https://stackoverflow.com/users/10255904/msayubi76" target="_blank" title="Stack Overflow">
-                                        <img src="/images/stack-overflow.png" alt="" height="22px">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                    <ul class="list-group list-group-horizontal position-absolute bottom-0">
+                        <li class="list-group-item border-0 py-0 px-1 ps-0">
+                            <a href="https://www.linkedin.com/in/msayubi76/" target="_blank" title="LinkedIn">
+                                <img src="/images/linkedin.png" alt="" height="22px">
+                            </a>
+                        </li>
+                        <li class="list-group-item border-0 py-0 px-1">
+                            <a href="https://stackoverflow.com/users/10255904/msayubi76" target="_blank"
+                                title="Stack Overflow">
+                                <img src="/images/stack-overflow.png" alt="" height="22px">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="row justify-content-end">
+
                         <div class="col-7">
                             <img src="/images/salahuddin-1.png" class="img-fluid" alt="">
                         </div>
@@ -38,7 +38,7 @@
 
         </div>
         <div class="col-md-4">
-            <div class="pt-5">
+            <div class="pt-5 d-sm-none d-md-block d-none">
                 <div class="triangle">
 
                 </div>
@@ -73,8 +73,8 @@
         </div>
     </div>
 
-    <div class="row py-5" id="about-section">
-        <div class="col-lg-6 col-md-6 col-12">
+    <div class="row py-4" id="about-section">
+        <div class="col-lg-6 col-md-6 col-12 mb-3">
             <div class="d-flex">
                 <div class="text-primary">About Me</div>
                 <div class="title-line">
@@ -103,17 +103,17 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-12">
-            <div>
-                <h3>Have a Project in Mind or <br> a Query?
-
-                </h3>
-                <p class="text-light">
-                    Let’s Connect and Discuss Your Ideas!
-                </p>
-            </div>
-            <div class="pt-5">
-                <a href="mailto:msayubi76@gmail.com">E: msayubi76@gmail.com</a>
+        <div class="col-lg-6 col-md-6 col-12 ">
+            <div class="bg-black px-3  py-2 rounded">
+                <div>
+                    <h3>Have a Project in Mind or <br> a Query?</h3>
+                    <p class="text-light">
+                        Let’s Connect and Discuss Your Ideas!
+                    </p>
+                </div>
+                <div class="pt-5">
+                    <a href="mailto:msayubi76@gmail.com">E: msayubi76@gmail.com</a>
+                </div>
             </div>
 
         </div>

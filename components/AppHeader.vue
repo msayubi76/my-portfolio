@@ -1,3 +1,25 @@
+<script setup>
+import { ref, onMounted, watch } from 'vue'
+import { useRoute } from 'nuxt/app'
+
+const route = useRoute()
+const activeHash = ref('')
+
+// Function to update the active hash based on the current URL
+const updateActiveHash = () => {
+    activeHash.value = window.location.hash
+}
+
+// Watch for route changes
+watch(() => route.fullPath, updateActiveHash)
+
+// Initialize the hash on page load
+onMounted(() => {
+    updateActiveHash()
+    window.addEventListener('hashchange', updateActiveHash)
+})
+</script>
+
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -9,26 +31,30 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <NuxtLink class="nav-link active  px-3" aria-current="page" href="/#top-section">Home</NuxtLink>
+                        <NuxtLink class="nav-link px-3" :class="{ active: activeHash === '#top-section' }"
+                            href="/#top-section">Home</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <NuxtLink class="nav-link  px-3" href="/#about-section">About</NuxtLink>
+                        <NuxtLink class="nav-link px-3" :class="{ active: activeHash === '#about-section' }"
+                            href="/#about-section">About</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <NuxtLink class="nav-link  px-3" href="/#services-section">Services</NuxtLink>
+                        <NuxtLink class="nav-link px-3" :class="{ active: activeHash === '#services-section' }"
+                            href="/#services-section">Services</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <NuxtLink class="nav-link  px-3" href="/#skills-section">Skills</NuxtLink>
+                        <NuxtLink class="nav-link px-3" :class="{ active: activeHash === '#skills-section' }"
+                            href="/#skills-section">Skills</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <NuxtLink class="nav-link  px-3" href="/#projects-section">Projects</NuxtLink>
+                        <NuxtLink class="nav-link px-3" :class="{ active: activeHash === '#projects-section' }"
+                            href="/#projects-section">Projects</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <NuxtLink class="nav-link  px-3    " href="/#contact-section">Contact</NuxtLink>
+                        <NuxtLink class="nav-link px-3" :class="{ active: activeHash === '#contact-section' }"
+                            href="/#contact-section">Contact</NuxtLink>
                     </li>
-
                 </ul>
-
             </div>
         </div>
     </nav>

@@ -2,58 +2,59 @@
     <section class="py-4 mt-4">
         <div class="row">
             <div class="col-12">
-                <h3 class="text-primary">
+                <h4 class="text-primary">
                     <u>Get in Touch</u>
-                </h3>
+                </h4>
 
-                <h2>Talk or Meet With Me
-                </h2>
+                <h3>Talk or Meet With Me
+                </h3>
                 <div class="row">
-                    <div class="col-6">
+                    <div class=" col-md-6 col-7">
                         <div class="row">
                             <div class="col-md-1">
                                 <img src="/images/phone.svg" height="24px" />
                             </div>
                             <div class="col-md-11">
                                 <p class="text-light text-opacity-75 mb-0 ">Call me Now</p>
-                                <h5>+92 (343) 723-9678</h5>
+                                <h6>+92 (343) 723-9678</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="row">
-                            <div class="col-md-1">
+                    <div class="col-md-6 col-5 px-0">
+                        <div class="d-flex">
+                            <div>
                                 <img src="/images/linkedin.png" height="24px" />
                             </div>
-                            <div class="col-md-11">
-                                <p class="text-light text-opacity-75 mb-0 "> <a
+                            <div>
+                                <p class="text-light text-opacity-75 mb-0 px-2"> <a
                                         href="https://www.linkedin.com/in/msayubi76" target="_blank">
                                         View Profile
-                                    </a></p>
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6 col-7">
                         <div class="row">
                             <div class="col-md-1">
                                 <img src="/images/email.svg" height="24px" />
                             </div>
                             <div class="col-md-11">
                                 <p class="text-light text-opacity-75 mb-0 ">Chat with Me</p>
-                                <h5>msayubi76@gmail.com</h5>
+                                <h6>msayubi76@gmail.com</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="row">
-                            <div class="col-md-1">
+                    <div class="col-md-6 col-5 px-0">
+                        <div class="d-flex">
+                            <div>
                                 <img src="/images/stack-overflow.png" height="24px" />
                             </div>
-                            <div class="col-md-11">
-                                <p class="text-light text-opacity-75 mb-0 "> <a
+                            <div>
+                                <p class="text-light text-opacity-75 mb-0  px-2"> <a
                                         href="https://stackoverflow.com/users/10255904/msayubi76" target="_blank">
                                         View Profile
                                     </a></p>
@@ -63,7 +64,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6 col-7">
                         <div class="row">
 
                             <div class="col-md-1">
@@ -71,20 +72,20 @@
                             </div>
                             <div class="col-md-11">
                                 <p class="text-light text-opacity-75 mb-0 ">Get Me Here</p>
-                                <h5>Islamabad, Pakistan</h5>
+                                <h6>Islamabad, Pakistan</h6>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="row">
-                            <div class="col-md-1">
+                    <div class="col-md-6 col-5 px-0">
+                        <div class="d-flex">
+                            <div>
                                 <img src="/images/facebook.png" height="24px" />
                             </div>
-                            <div class="col-md-11">
-                                <p > <a
-                                        href="https://www.facebook.com/msayubi76" target="_blank">
+                            <div>
+                                <p class="px-2"> <a href="https://www.facebook.com/msayubi76" target="_blank">
                                         View Profile
                                     </a></p>
+
                             </div>
                         </div>
                     </div>

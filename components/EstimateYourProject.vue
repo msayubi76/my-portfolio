@@ -1,7 +1,7 @@
 <template>
     <section class="py-4 estimate-project">
         <div class="row">
-            <div class="col-8 mx-auto">
+            <div class="col-md-8 col-10 mx-auto">
                 <div class="position-relative">
                     <div style="background-image: url('./images/team-work.jpg'); height: 184px;
     opacity: 0.3;
