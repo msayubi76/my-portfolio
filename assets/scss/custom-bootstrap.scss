@@ -146,6 +146,18 @@ $headings-color: #fff;
     background: $primary;
 }
 
+  
+#gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#gallery-container img:hover {
+    transform: scale(1.05);
+}
 @media only screen and (max-width: 767px) {
     .about-image {
         height: 400px;

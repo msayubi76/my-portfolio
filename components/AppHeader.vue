@@ -55,7 +55,19 @@ onMounted(() => {
                             href="/#contact-section">Contact</NuxtLink>
                     </li>
                 </ul>
+                <a href="/images/full-stack-web-developer-salah-ud-din-cv.pdf" download target="_blank"
+                    class="btn btn-primary text-white btn-sm d-none d-md-block ">
+                    Download CV
+                    <img src="/images/download.svg" alt="">
+                </a>
             </div>
+
+
         </div>
+        <a href="/images/full-stack-web-developer-salah-ud-din-cv.pdf" download target="_blank"
+            class="btn btn-primary text-white btn-sm  d-block d-lg-none position-absolute end-0 top-0 mt-2">
+            Download CV
+            <img src="/images/download.svg" alt="">
+        </a>
     </nav>
 </template>

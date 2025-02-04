@@ -5,8 +5,8 @@
         </h4>
         <h3 class="text-center">Projects I've Worked On </h3>
 
-        <div class="d-flex flex-row overflow-auto scroll-container" ref="scrollContainer" @mousedown="startDrag" @mousemove="onDrag" @mouseup="stopDrag"
-            @mouseleave="stopDrag">
+        <div class="d-flex flex-row overflow-auto scroll-container" ref="scrollContainer" @mousedown="startDrag"
+            @mousemove="onDrag" @mouseup="stopDrag" @mouseleave="stopDrag">
             <!-- <div class="d-flex flex-r flex-grow-1 overflow-auto"> -->
             <div v-for="(project, index) in projects" :key="index" style="min-width: 358px;" class="me-4">
                 <div class="py-3 px-2 pb-1 bg-black rounded-3">
@@ -76,9 +76,9 @@ const projects = [
     },
     {
         name: 'School Management',
-        image: './images/project.png',
+        image: './images/school-management.png',
         link: '/projects/school-management',
-        description: null
+        description: "Developed a School Management System with Laravel, jQuery & Bootstrap. Features: staff & student registration, academics, fee management, admissions, expenses, and certificate generation."
     }];
 
 // Dragging Logic
