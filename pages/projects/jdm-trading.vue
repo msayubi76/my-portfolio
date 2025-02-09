@@ -1,20 +1,47 @@
+<script setup>
+const images = ref([])
+
+const config = useRuntimeConfig();
+
+for (let index = 1; index < 9; index++) {
+
+    images.value.push({
+        src: `${config.app.baseURL}images/jdm-${index}.png`
+    })
+
+}
+</script>
 <template>
 
     <div class="container">
         <div class="project">
-            <h2>JDM Trading - Car Stock Management Website</h2>
-            <p><strong>Live Link</strong>: <a href="https://jdm-trading.com/" target="_blank">JDM Trading</a></p>
-            <p><strong>Technologies Used</strong>: Laravel, jQuery, Bootstrap 5</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>JDM Trading - Car Stock Management Website</h2>
+                    <p><strong>Live Link</strong>: <a href="https://jdm-trading.com/" target="_blank">JDM Trading</a>
+                    </p>
+                    <p><strong>Technologies Used</strong>: Laravel, jQuery, Bootstrap 5</p>
 
-            <h3>Project Overview</h3>
-            <p>
-                Developed <strong>JDM Trading</strong>, a car stock management website where users can view all
-                available car stock with labels indicating whether the cars are reserved or available for sale. The
-                website includes essential pages like <strong>Home</strong>, <strong>About</strong>, <strong>Stock
-                    List</strong>, and <strong>Contact</strong>. The <strong>admin panel</strong> allows administrators
-                to manage stock category-wise, track expenses, manage sales, handle CNF (Cost and Freight), and update
-                dynamic content for the website.
-            </p>
+                    <h3>Project Overview</h3>
+                    <p>
+                        Developed <strong>JDM Trading</strong>, a car stock management website where users can view all
+                        available car stock with labels indicating whether the cars are reserved or available for sale.
+                        The
+                        website includes essential pages like <strong>Home</strong>, <strong>About</strong>,
+                        <strong>Stock
+                            List</strong>, and <strong>Contact</strong>. The <strong>admin panel</strong> allows
+                        administrators
+                        to manage stock category-wise, track expenses, manage sales, handle CNF (Cost and Freight), and
+                        update
+                        dynamic content for the website.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <video src="/images/school-management-system.mp4" controls width="100%"> </video>
+                    <GalleryImages :images="images" />
+
+                </div>
+            </div>
 
             <h3>Key Features and Modules</h3>
             <ol>
@@ -50,7 +77,8 @@
             <h3>My Role and Contributions</h3>
             <ul>
                 <li>Developed the <strong>frontend website</strong> using <strong>Bootstrap 5</strong> and
-                    <strong>jQuery</strong> for a responsive and user-friendly interface.</li>
+                    <strong>jQuery</strong> for a responsive and user-friendly interface.
+                </li>
                 <li>Built the <strong>admin panel</strong> using <strong>Laravel</strong> for managing car stock,
                     expenses, sales, CNF, and dynamic content.</li>
                 <li>Implemented search and filter functionality for the <strong>Stock List Page</strong>.</li>
@@ -65,7 +93,7 @@
                 <li><strong>Database</strong>: MySQL</li>
                 <li><strong>Version Control</strong>: Git</li>
             </ul>
-   
+
         </div>
     </div>
 

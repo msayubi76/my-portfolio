@@ -1,18 +1,44 @@
+<script setup>
+const images = ref([])
+
+const config = useRuntimeConfig();
+
+for (let index = 1; index < 5; index++) {
+
+    images.value.push({
+        src: `${config.app.baseURL}images/plutopakistan-${index}.png`
+    })
+
+}
+</script>
 <template>
     <div class="container">
         <div class="project">
-            <h2>PlutoPakistan - Ecommerce Multivendor Platform</h2>
-            <p><strong>Live Link</strong>: <a href="https://plutopakistan.com" target="_blank">PlutoPakistan</a></p>
-            <p><strong>Technologies Used</strong>: Laravel, jQuery, Nuxt 3, RESTful APIs</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>PlutoPakistan - Ecommerce Multivendor Platform</h2>
+                    <p><strong>Live Link</strong>: <a href="https://plutopakistan.com" target="_blank">PlutoPakistan</a>
+                    </p>
+                    <p><strong>Technologies Used</strong>: Laravel, jQuery, Nuxt 3, RESTful APIs</p>
 
-            <h3>Project Overview</h3>
-            <p>
-                Developed <strong>PlutoPakistan</strong>, a robust multivendor ecommerce platform where customers can
-                purchase products listed by registered vendors. The platform supports multiple payment options, order
-                tracking, and a seamless return/refund process. The <strong>admin panel</strong> was built using
-                <strong>Laravel</strong> and <strong>jQuery</strong>, while the <strong>frontend website</strong> was
-                developed using <strong>Nuxt 3</strong> for a fast and responsive user experience.
-            </p>
+                    <h3>Project Overview</h3>
+                    <p>
+                        Developed <strong>PlutoPakistan</strong>, a robust multivendor ecommerce platform where
+                        customers can
+                        purchase products listed by registered vendors. The platform supports multiple payment options,
+                        order
+                        tracking, and a seamless return/refund process. The <strong>admin panel</strong> was built using
+                        <strong>Laravel</strong> and <strong>jQuery</strong>, while the <strong>frontend
+                            website</strong> was
+                        developed using <strong>Nuxt 3</strong> for a fast and responsive user experience.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <video src="/images/school-management-system.mp4" controls width="100%"> </video>
+                    <GalleryImages :images="images" />
+
+                </div>
+            </div>
 
             <h3>Key Features and Modules</h3>
             <ol>
@@ -64,7 +90,8 @@
             <h3>My Role and Contributions</h3>
             <ul>
                 <li>Developed the <strong>admin panel</strong> using <strong>Laravel</strong> and
-                    <strong>jQuery</strong> for managing vendors, customers, and sales.</li>
+                    <strong>jQuery</strong> for managing vendors, customers, and sales.
+                </li>
                 <li>Built the <strong>frontend website</strong> using <strong>Nuxt 3</strong> for a fast and responsive
                     user experience.</li>
                 <li>Integrated <strong>RESTful APIs</strong> to connect the frontend and backend seamlessly.</li>

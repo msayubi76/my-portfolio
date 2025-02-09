@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const baseUrl = "/my-portfolio/";
+const baseUrl = "/";
 // my-portfolio/
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",

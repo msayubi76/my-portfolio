@@ -1,23 +1,55 @@
+<script setup>
+const images = ref([])
+
+const config = useRuntimeConfig();
+
+for (let index = 1; index < 6; index++) {
+
+    images.value.push({
+        src: `${config.app.baseURL}images/exchange-image-${index}.png`
+    })
+
+}
+</script>
+
 <template>
     <div class="container">
         <div class="project">
-            <h2>Crypto Exchange Platform</h2>
-            <p><strong>Live Link</strong>: <a href="https://www.bitnasdaq.com/" target="_blank">BitNasdaq</a></p>
-            <p><strong>Technologies Used</strong>: Nuxt.js, Ant Design (UI Framework), RESTful APIs, WebSocket, CMS
-                Integration</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Crypto Exchange Platform</h2>
+                    <p><strong>Live Link</strong>: <a href="https://www.bitnasdaq.com/" target="_blank">BitNasdaq</a>
+                    </p>
+                    <p><strong>Technologies Used</strong>: Nuxt.js, Ant Design (UI Framework), RESTful APIs, WebSocket,
+                        CMS
+                        Integration</p>
 
-            <h3>Project Overview</h3>
-            <p>
-                Built a high-performance <strong>Crypto Exchange Platform</strong> that enables users to trade, convert,
-                and
-                manage cryptocurrencies seamlessly. The platform supports advanced trading features like <strong>Spot
-                    Trading</strong>, <strong>Margin Trading</strong>, and <strong>Futures Perpetual Trading</strong>,
-                along
-                with secure P2P transactions and real-time market data integration. Designed with a focus on scalability
-                and
-                user experience, the platform caters to both novice and experienced traders.
-            </p>
+                    <h3>Project Overview</h3>
+                    <p>
+                        Built a high-performance <strong>Crypto Exchange Platform</strong> that enables users to trade,
+                        convert,
+                        and
+                        manage cryptocurrencies seamlessly. The platform supports advanced trading features like
+                        <strong>Spot
+                            Trading</strong>, <strong>Margin Trading</strong>, and <strong>Futures Perpetual
+                            Trading</strong>,
+                        along
+                        with secure P2P transactions and real-time market data integration. Designed with a focus on
+                        scalability
+                        and
+                        user experience, the platform caters to both novice and experienced traders.
+                    </p>
 
+                </div>
+
+                <div class="col-md-6">
+
+                    <video src="/images/school-management-system.mp4" controls width="100%"> </video>
+                    <GalleryImages :images="images" />
+
+
+                </div>
+            </div>
             <h3>Key Features and Modules</h3>
             <ol>
                 <li>

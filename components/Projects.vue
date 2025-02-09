@@ -5,9 +5,8 @@
         </h4>
         <h3 class="text-center">Projects I've Worked On </h3>
 
-        <div class="d-flex flex-row overflow-auto scroll-container" ref="scrollContainer" @mousedown="startDrag"
+        <!-- <div class="d-flex flex-row overflow-auto scroll-container" ref="scrollContainer" @mousedown="startDrag"
             @mousemove="onDrag" @mouseup="stopDrag" @mouseleave="stopDrag">
-            <!-- <div class="d-flex flex-r flex-grow-1 overflow-auto"> -->
             <div v-for="(project, index) in projects" :key="index" style="min-width: 358px;" class="me-4">
                 <div class="py-3 px-2 pb-1 bg-black rounded-3">
                     <NuxtLink :href="project.link" class="text-decoration-none">
@@ -20,11 +19,10 @@
                     <h4 class="font-bold text-light text-center py-3">{{ project.name }}</h4>
                 </div>
             </div>
-            <!-- </div> -->
-        </div>
+        </div> -->
 
 
-        <!-- <ClientOnly>
+        <!-- <ClientOnly> -->
             <swiper-container ref="containerRef">
                 <swiper-slide v-for="(project, index) in projects" :key="index">
                     <div class="py-3 px-2 pb-1 bg-black rounded-3">
@@ -41,7 +39,7 @@
             </swiper-container>
 
 
-        </ClientOnly> -->
+        <!-- </ClientOnly> -->
 
 
     </section>
@@ -52,13 +50,13 @@
 const projects = [
     {
         name: 'Crypto Exchange Platform',
-        image: './images/project.png',
+        image: './images/exchange-image-banner.png',
         link: '/projects/crypto-exchange-platform',
         description: "A full-featured crypto exchange platform developed  using Nuxt.js and Ant Design. Key features include P2P trading, spot/margin/futures trading, internal transfers, and decentralized deposits/withdrawals."
     },
     {
         name: 'PlutoPakistan',
-        image: './images/project.png',
+        image: './images/plutopakistan-banner.png',
         link: '/projects/pluto-pakistan',
         description: "Multivendor ecommerce platform  developed using Laravel, jQuery, and Nuxt 3. Key features include multi-payment options, return/refund processing, and a robust commission system for vendors and admin."
     },
@@ -70,7 +68,7 @@ const projects = [
     },
     {
         name: 'Jdm Trading',
-        image: './images/project.png',
+        image: './images/jdm-banner.png',
         link: '/projects/jdm-trading',
         description: "A car stock management platform built with Laravel, jQuery, and Bootstrap 5. Features include stock status labels, an admin panel for managing inventory, expenses, sales, and dynamic content."
     },

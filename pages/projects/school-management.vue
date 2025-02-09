@@ -23,10 +23,9 @@
                 <div class="col-md-6">
 
                     <video src="/images/school-management-system.mp4" controls width="100%"> </video>
-
-                    <ClientOnly>
+ 
                         <GalleryImages :images="images" />
-                    </ClientOnly>
+                    
 
 
                     <!-- <div style="position: relative; padding-bottom: 56.22254758418741%; height: 0;"><iframe src="https://www.loom.com/embed/97d28b76f3ae47c598a13cabf9064999?sid=16ae653f-cb1b-4cdf-b478-41879ff918d6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div> -->
