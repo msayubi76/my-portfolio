@@ -3,7 +3,7 @@
     <div style="width: 100px; text-align: center;">
         <div class="progress-bar bg-dark" :data-progress="progress" :style="`background:
         radial-gradient(closest-side, #222222 79%, transparent 80% 100%),
-        conic-gradient(#f26b50 ${progress}%, white 0)`">
+        conic-gradient(${color} ${progress}%, white 0)`">
             <span class="text-opacity-75 text-light">{{ progress }}%</span>
         </div>
         <div class="text-light">
@@ -20,6 +20,9 @@ const props = defineProps({
         required: true
     },
     text: {
+        type: String
+    },
+    color: {
         type: String
     }
 });

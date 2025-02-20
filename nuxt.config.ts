@@ -28,6 +28,10 @@ export default defineNuxtConfig({
           src: baseUrl + "libraries/lightgallery.umd.js",
           defer: true, // Ensures the script is loaded after the DOM is ready
         },
+        // {
+        //   src: baseUrl + "libraries/lg-zoom.js",
+        //   defer: true, // Ensures the script is loaded after the DOM is ready
+        // },
       ],
     },
   },

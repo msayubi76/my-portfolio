@@ -6,7 +6,7 @@ const config = useRuntimeConfig();
 for (let index = 1; index < 6; index++) {
 
     images.value.push({
-        src: `${config.app.baseURL}images/exchange-image-${index}.png`
+        src: `${config.app.baseURL}images/exchange-${index}.png`
     })
 
 }
@@ -44,7 +44,7 @@ for (let index = 1; index < 6; index++) {
 
                 <div class="col-md-6">
 
-                    <video src="/images/school-management-system.mp4" controls width="100%"> </video>
+                    <video src="/images/crypto-exchange.mp4" controls width="100%"> </video>
                     <GalleryImages :images="images" />
 
 

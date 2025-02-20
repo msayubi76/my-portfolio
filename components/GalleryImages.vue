@@ -23,6 +23,14 @@
     </div>
 </template>
 <script setup>
+// import lgZoom from '/libraries/lg-zoom'
+// import lightGallery from 'lightgallery';
+
+// Plugins
+import lgZoom from 'lightgallery/plugins/zoom'
+
+
+
 const props = defineProps({
     images: {
         type: Array,
@@ -33,18 +41,24 @@ const props = defineProps({
 
 onMounted(() => {
 
+
     console.log('imagesimagesimages', JSON.stringify(props.images));
 
     const galleryElement = document.getElementById("gallery-container");
 
     if (galleryElement) {
         lightGallery(galleryElement, {
+            plugins: [lgZoom], // Enable the Zoom plugin
             speed: 500,
             controls: true,
             thumbnail: true,
-            zoom: true,
             selector: "a",
-
+            zoomFromOrigin: true,
+            mobileSettings: {
+                controls: true,
+                showCloseIcon: true,
+                download: true,
+            }
         });
     }
 });
@@ -60,7 +74,7 @@ const swiper = useSwiper(containerRef, {
         delay: 1000,
     },
     slidesPerView: 4,
-    spaceBetween: 20,
+    spaceBetween: 10,
     navigation: true,
     creativeEffect: {
         prev: {
@@ -71,6 +85,20 @@ const swiper = useSwiper(containerRef, {
             shadow: true,
             translate: [0, 0, -400],
         },
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 3
+        },
+        // when window width is >= 640px
+        400: {
+            slidesPerView: 4
+        },
+        // when window width is >= 1200
+        1200: {
+            slidesPerView: 3
+        }
     },
 })
 

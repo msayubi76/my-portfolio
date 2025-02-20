@@ -35,44 +35,57 @@ for (let index = 1; index < 9; index++) {
                         update
                         dynamic content for the website.
                     </p>
+
+
+                    <h3>Key Features and Modules</h3>
+                    <ol>
+                        <li>
+                            <strong>Website Features</strong>:
+                            <ul>
+                                <li><strong>Home Page</strong>: Displays featured car stock and highlights.</li>
+                                <li><strong>About Page</strong>: Provides information about the company and services.
+                                </li>
+                                <li><strong>Stock List Page</strong>: Lists all available car stock with filters and
+                                    search
+                                    functionality.</li>
+                                <ul>
+                                    <li>Each car listing includes details like make, model, year, price, and
+                                        availability status
+                                        (e.g., "Available" or "Reserved").</li>
+                                </ul>
+                                <li><strong>Contact Page</strong>: Allows users to send inquiries or messages to the
+                                    company.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Admin Panel Features</strong>:
+                            <ul>
+                                <li><strong>Stock Management</strong>: Add, update, or remove car listings
+                                    category-wise.</li>
+                                <li><strong>Expense Management</strong>: Track and manage expenses related to car stock.
+                                </li>
+                                <li><strong>Sales Management</strong>: Manage sales records and update sales status.
+                                </li>
+                                <li><strong>CNF Management</strong>: Handle Cost and Freight details for each car.</li>
+                                <li><strong>Dynamic Content Management</strong>: Update website content (e.g., banners,
+                                    text,
+                                    images) from the admin panel.</li>
+                                <li><strong>Settings</strong>: Configure website settings and preferences.</li>
+                            </ul>
+                        </li>
+                    </ol>
                 </div>
                 <div class="col-md-6">
-                    <video src="/images/school-management-system.mp4" controls width="100%"> </video>
+                    <h4>Website</h4>
+                    <video src="/images/jdm-panel.mp4"  type="video/mp4" controls width="100%"> </video>
                     <GalleryImages :images="images" />
+                    <h4 class="mt-3">Admin Panel</h4>
+                    <video src="/images/jdm-website.mp4"  type="video/mp4" controls width="100%"> </video>
 
                 </div>
             </div>
 
-            <h3>Key Features and Modules</h3>
-            <ol>
-                <li>
-                    <strong>Website Features</strong>:
-                    <ul>
-                        <li><strong>Home Page</strong>: Displays featured car stock and highlights.</li>
-                        <li><strong>About Page</strong>: Provides information about the company and services.</li>
-                        <li><strong>Stock List Page</strong>: Lists all available car stock with filters and search
-                            functionality.</li>
-                        <ul>
-                            <li>Each car listing includes details like make, model, year, price, and availability status
-                                (e.g., "Available" or "Reserved").</li>
-                        </ul>
-                        <li><strong>Contact Page</strong>: Allows users to send inquiries or messages to the company.
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Admin Panel Features</strong>:
-                    <ul>
-                        <li><strong>Stock Management</strong>: Add, update, or remove car listings category-wise.</li>
-                        <li><strong>Expense Management</strong>: Track and manage expenses related to car stock.</li>
-                        <li><strong>Sales Management</strong>: Manage sales records and update sales status.</li>
-                        <li><strong>CNF Management</strong>: Handle Cost and Freight details for each car.</li>
-                        <li><strong>Dynamic Content Management</strong>: Update website content (e.g., banners, text,
-                            images) from the admin panel.</li>
-                        <li><strong>Settings</strong>: Configure website settings and preferences.</li>
-                    </ul>
-                </li>
-            </ol>
 
             <h3>My Role and Contributions</h3>
             <ul>

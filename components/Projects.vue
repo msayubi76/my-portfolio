@@ -23,20 +23,20 @@
 
 
         <!-- <ClientOnly> -->
-            <swiper-container ref="containerRef">
-                <swiper-slide v-for="(project, index) in projects" :key="index">
-                    <div class="py-3 px-2 pb-1 bg-black rounded-3">
-                        <NuxtLink :href="project.link" class="text-decoration-none">
-                            <p class="text-light text-opacity-75">
-                                {{ project.description }}
-                            </p>
+        <swiper-container ref="containerRef">
+            <swiper-slide v-for="(project, index) in projects" :key="index">
+                <div class="py-3 px-2 pb-1 bg-black rounded-3">
+                    <NuxtLink :href="project.link" class="text-decoration-none">
+                        <p class="text-light text-opacity-75">
+                            {{ project.description }}
+                        </p>
 
-                            <img :src="project.image" class="img-fluid" />
-                        </NuxtLink>
-                        <h4 class="font-bold text-light text-center py-3">{{ project.name }}</h4>
-                    </div>
-                </swiper-slide>
-            </swiper-container>
+                        <img :src="project.image" class="img-fluid" />
+                    </NuxtLink>
+                    <h4 class="font-bold text-light text-center py-3">{{ project.name }}</h4>
+                </div>
+            </swiper-slide>
+        </swiper-container>
 
 
         <!-- </ClientOnly> -->
@@ -79,31 +79,6 @@ const projects = [
         description: "Developed a School Management System with Laravel, jQuery & Bootstrap. Features: staff & student registration, academics, fee management, admissions, expenses, and certificate generation."
     }];
 
-// Dragging Logic
-const scrollContainer = ref(null);
-const isDragging = ref(false);
-const startX = ref(0);
-const scrollLeft = ref(0);
-
-const startDrag = (e) => {
-    isDragging.value = true;
-    startX.value = e.pageX - scrollContainer.value.offsetLeft;
-    scrollLeft.value = scrollContainer.value.scrollLeft;
-    scrollContainer.value.style.cursor = 'grabbing';
-};
-
-const onDrag = (e) => {
-    if (!isDragging.value) return;
-    e.preventDefault();
-    const x = e.pageX - scrollContainer.value.offsetLeft;
-    const walk = (x - startX.value) * 2; // Adjust sensitivity
-    scrollContainer.value.scrollLeft = scrollLeft.value - walk;
-};
-
-const stopDrag = () => {
-    isDragging.value = false;
-    scrollContainer.value.style.cursor = 'grab';
-};
 
 // Create 10 slides
 
@@ -134,6 +109,23 @@ const swiper = useSwiper(containerRef, {
             shadow: true,
             translate: [0, 0, -400],
         },
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20
+        },
+        // when window width is >= 640px
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        // when window width is >= 1200
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 20
+        }
     },
 })
 

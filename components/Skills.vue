@@ -9,7 +9,7 @@
 
         <div class="row mt-5">
             <div class="col-md-2 col-sm-3 col-4 mb-3" v-for="(skill, index) in skills" :key="index">
-                <ProgressCircle :progress="skill.progress" :text="skill.name" />
+                <ProgressCircle :progress="skill.progress" :text="skill.name" :color="skill.color"/>
             </div>
         </div>
     </section>
@@ -21,47 +21,58 @@
 const skills = ref([
     {
         name: 'VueJs/NuxtJs',
-        progress: 85
+        progress: 85,
+        color:'#49a900'
     },
     {
         name: 'Laravel',
-        progress: 85
+        progress: 85,
+        color:'#49a900'
     },
     {
         name: 'Aws',
-        progress: 40
+        progress: 40,
+        color:'#49a900'
     },
     {
         name: 'MySql',
-        progress: 70
+        progress: 70,
+        color:'#49a900'
     },
     {
         name: 'Git',
-        progress: 70
+        progress: 70,
+        color:'#f26b50'
     },
     {
         name: 'JQuery',
-        progress: 75
+        progress: 75,
+        color:'#f26b50'
     },
     {
         name: 'Linux-Shell',
-        progress: 35
+        progress: 35,
+        color:'#f26b50'
     },
     {
         name: 'Restfull Api',
-        progress: 90
+        progress: 90,
+        color:'#f26b50'
     },
     {
         name: 'Bootstrap',
-        progress: 90
+        progress: 90,
+        color:'#49a900'
     },
     {
         name: 'Scss',
-        progress: 80
+        progress: 80,
+        color:'#f26b50'
     },
     {
         name: 'Sass',
-        progress: 80
+        progress: 80,
+        color:'#f26b50'
     },
 ])
 
