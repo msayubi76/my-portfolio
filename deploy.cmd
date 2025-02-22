@@ -1,0 +1,23 @@
+@echo off
+echo Running Nuxt Build...
+npm run generate
+
+echo Switching to Build Branch...
+git checkout build 2>nul || git checkout -b build
+
+echo Copying Built Files...
+robocopy dist . /E /MOVE > nul
+
+echo Staging Changes...
+git add .
+
+echo Committing Changes...
+git commit -m "Deploy: Auto-generated build"
+
+echo Pushing to Remote Build Branch...
+git push origin build --force
+
+echo Switching Back to Main Branch...
+git checkout -
+
+echo Done!
