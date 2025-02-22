@@ -47,6 +47,7 @@ export default defineNuxtConfig({
       "process.env.DEBUG": false,
     },
   },
+  plugins: ['~/plugins/google-analytics.client.ts'],
 
   modules: ["nuxt-swiper"],
 });
