@@ -13,11 +13,22 @@ export default defineNuxtConfig({
   app: {
     baseURL: baseUrl, // Ensure this matches your repo name
     head: {
+      title: "Salah-ud-Din",
+      meta: [
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+        {
+          name: "google-site-verification",
+          content: "jprAX6xAj1nBNoAZVvGr0feBGZdfTWOEDVr1qzCHO5c",
+        },
+      ],
+
+      // <meta name="google-site-verification" content="jprAX6xAj1nBNoAZVvGr0feBGZdfTWOEDVr1qzCHO5c" />
       link: [
         {
           rel: "stylesheet",
           href: baseUrl + "libraries/lightgallery-bundle.css",
         },
+        { rel: "icon", type: "image/png", href: "/images/favicon.png" },
       ],
       script: [
         {
@@ -28,10 +39,6 @@ export default defineNuxtConfig({
           src: baseUrl + "libraries/lightgallery.umd.js",
           defer: true, // Ensures the script is loaded after the DOM is ready
         },
-        // {
-        //   src: baseUrl + "libraries/lg-zoom.js",
-        //   defer: true, // Ensures the script is loaded after the DOM is ready
-        // },
       ],
     },
   },

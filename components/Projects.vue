@@ -62,7 +62,7 @@ const projects = [
     },
     {
         name: 'E-Procurement',
-        image: './images/project.png',
+        image: './images/procurement-banner.png',
         link: '/projects/e-procurement',
         description: "Developed an E-Procurement Platform using Laravel and Vue.js. Key features include quotation management, vendor analysis, purchase order generation, and a built-in messaging system for seamless communication."
     },

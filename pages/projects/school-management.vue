@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-md-6">
 
-                    <video src="/images/school-management-system.mp4" controls width="100%"> </video>
+                    <video src="/videos/school-management-system.mp4" controls width="100%"> </video>
  
                         <GalleryImages :images="images" />
                     

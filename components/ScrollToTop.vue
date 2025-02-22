@@ -1,39 +1,32 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
-
 const showButton = ref(false);
 
+// Check scroll position
 const handleScroll = () => {
-    if (typeof window !== 'undefined') {
-        console.log("Scroll position:", window.scrollY); // Debugging
-        showButton.value = window.scrollY > 200;
-    }
+    showButton.value = window.scrollY > 120; // Show button after scrolling 200px
 };
 
+// Scroll to top function
 const scrollToTop = () => {
-    if (typeof window !== 'undefined') {
-        console.log("Scrolling to top"); // Debugging
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
+// Add event listener on mount
 onMounted(() => {
-    if (typeof window !== 'undefined') {
-        console.log("Scroll event listener added"); // Debugging
-        window.addEventListener("scroll", handleScroll);
-    }
+    window.addEventListener("scroll", handleScroll);
 });
 
+// Remove event listener on unmount
 onUnmounted(() => {
-    if (typeof window !== 'undefined') {
-        console.log("Scroll event listener removed"); // Debugging
-        window.removeEventListener("scroll", handleScroll);
-    }
+    window.removeEventListener("scroll", handleScroll);
 });
 </script>
 
 <template>
-    <button v-if="showButton" @click="scrollToTop">
-        Scroll to Top
+    <button v-if="showButton" @click="scrollToTop" class="scroll-to-top">
+        <img src="/images/up-arrow.svg" height="30px"/>
     </button>
 </template>
+
+<style scoped>
+</style>

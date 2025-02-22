@@ -7,38 +7,47 @@
         <div class="">
             <swiper-container ref="containerRef">
                 <swiper-slide>
-                    <div class="text-center" style="min-width: 358px;">
-                        <img src="/images/vuejs.png" alt="" height="70px">
-                        <h4 class="mt-4">VueJs/NuxtJs</h4>
-                        <p class="text-light text-opacity-75">Advanced proficiency in building dynamic web applications
-                            using
-                            Vue.js and Nuxt.js.</p>
+                    <div class="text-center service-slide" >
+                        <img src="/images/vuejs.png" alt="Vue.js Logo" height="70">
+                        <h4 class="mt-3">Vue.js / Nuxt.js</h4>
+                        <p class="text-light text-opacity-75 mb-2">
+                            Advanced expertise in developing dynamic web applications with Vue.js and Nuxt.js.
+                        </p>
+                        <p class="fw-semibold text-light text-opacity-75">
+                            Vuex · Pinia · iView · Ant Design · BootstrapVue · Laravel Echo · SignalR
+                        </p>
                     </div>
+
                 </swiper-slide>
                 <swiper-slide>
-                    <div class="text-center " style="min-width: 358px;">
+                    <div class="text-center service-slide" >
                         <div class="position-relative mx-auto" style="width: fit-content;">
-                            <div class="bg-black p-3 laravel-box">
-                                <img src="/images/laravel.png" alt="" height="70px">
+                            <div class="bg-black p-3 laravel-box text-light">
+                                <img src="/images/laravel.png" alt="Laravel Logo" height="70">
                                 <h4 class="mt-4">Laravel (PHP)</h4>
-                                <p class="text-light text-opacity-75">Extensive experience with the Laravel framework
-                                    for
-                                    building scalable web applications.</p>
-                            </div>
-                            <div class="laravel-triangle">
 
+                                <p class="fw-semibold text-opacity-75">
+                                    <small>Broadcasting · Pusher · Notification · Queue Jobs · Inertia.js · Artisan
+                                        Commands ·
+                                        Task Scheduling · Seeders · Factories. etc</small>
+                                </p>
                             </div>
+                            <div class="laravel-triangle"></div>
                         </div>
                     </div>
                 </swiper-slide>
                 <swiper-slide>
-                    <div class="text-center" style="min-width: 358px;">
-                        <img src="/images/aws.png" alt="" height="70px">
+                    <div class="text-center service-slide" >
+                        <img src="/images/aws.png" alt="AWS Logo" height="70">
                         <h4 class="mt-4">AWS</h4>
-                        <p class="text-light text-opacity-75">Strong knowledge of AWS services (EC2, S3, Rout53,
-                            Aws-Amplify
-                            etc.), with ongoing learning and implementation.</p>
+                        <p class="text-light text-opacity-75 mb-2">
+                            Strong knowledge of AWS services with hands-on experience in deployment and scalability.
+                        </p>
+                        <p class="fw-semibold text-opacity-75">
+                            EC2 · S3 · Route 53 · AWS Amplify · CloudFront · RDS · IAM
+                        </p>
                     </div>
+
                 </swiper-slide>
             </swiper-container>
         </div>
@@ -63,12 +72,12 @@ const swiper = useSwiper(containerRef, {
         320: {
             slidesPerView: 1,
             spaceBetween: 20
-        },        
+        },
         // when window width is >= 640px
         1024: {
             slidesPerView: 2,
             spaceBetween: 20
-        },        
+        },
         // when window width is >= 1200
         1200: {
             slidesPerView: 3,

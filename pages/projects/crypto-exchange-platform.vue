@@ -44,7 +44,7 @@ for (let index = 1; index < 6; index++) {
 
                 <div class="col-md-6">
 
-                    <video src="/images/crypto-exchange.mp4" controls width="100%"> </video>
+                    <video src="/videos/crypto-exchange.mp4" controls width="100%"> </video>
                     <GalleryImages :images="images" />
 
 

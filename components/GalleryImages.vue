@@ -4,7 +4,7 @@
             <swiper-slide class="gallery-item" v-for="(image, index) in images" :key="index">
 
                 <a :href="image.src" :data-src="image.src">
-                    <img :src="image.src" class="img-fluid" />
+                    <img :src="image.src" class="img-fluid"  style="max-height: 240px;"/>
                 </a>
 
             </swiper-slide>

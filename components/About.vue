@@ -6,10 +6,12 @@
                 <div class="about-top">
                     <h2>Salah-ud-Din</h2>
                     <h3>Islamabad, Pakistan</h3>
-                    <ul class="text-light">
-                        <li>🚀 Transforming Ideas into Scalable Web Solutions</li>
-                        <li>💻 Experienced in Laravel, Vue.js, AWS, and API development</li>
-                        <li> 🏆 Dedicated to delivering clean, efficient, and robust solutions</li>
+                    <ul class="text-light" style="list-style: none;" >
+                        <li>🚀 <b>Designing and developing</b> scalable, high-performance web applications.</li>
+                        <li>💻 <b>Experienced in</b> Laravel, Vue.js, AWS, and API development.</li>
+                        <li>🏆 <b>Delivering maintainable</b>, high-quality solutions that stand the test of time.</li>
+                        <li class="d-none d-sm-block">🛠️ <b>Thoroughly testing</b> to ensure bug-free, efficient, and seamless experiences.</li>
+                        <li class="d-none d-sm-block">🎯 <b>Solving complex problems</b> and guiding teams to success.</li>
                     </ul>
 
                 </div>
@@ -38,7 +40,7 @@
 
         </div>
         <div class="col-md-4">
-            <div class="pt-5 d-sm-none d-md-block d-none">
+            <div class="pt-5  d-xl-block d-none">
                 <div class="triangle">
 
                 </div>

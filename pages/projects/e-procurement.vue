@@ -1,18 +1,44 @@
+<script setup>
+const images = ref([])
+
+const config = useRuntimeConfig();
+
+for (let index = 0; index < 5; index++) {
+
+    images.value.push({
+        src: `${config.app.baseURL}images/procurement-${index}.png`
+    })
+
+}
+</script>
 <template>
     <div class="container">
         <div class="project">
-            <h2>E-Procurement Platform</h2>
-            <p><strong>Technologies Used</strong>: Laravel, Vue.js, RESTful APIs</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>E-Procurement Platform</h2>
+                    <p><strong>Technologies Used</strong>: Laravel, Vue.js, RESTful APIs</p>
 
-            <h3>Project Overview</h3>
-            <p>
-                Developed a comprehensive <strong>E-Procurement Platform</strong> to streamline the procurement process
-                between buyers and vendors. The platform allows buyers to create and share quotations, analyze vendor
-                responses, and generate purchase orders. Vendors can respond to quotations with detailed rates,
-                discounts, taxes, and delivery terms. The system also includes a messaging feature for seamless
-                communication between buyers and vendors, along with role-based access control for employees of both
-                buyers and vendors.
-            </p>
+                    <h3>Project Overview</h3>
+                    <p>
+                        Developed a comprehensive <strong>E-Procurement Platform</strong> to streamline the procurement
+                        process
+                        between buyers and vendors. The platform allows buyers to create and share quotations, analyze
+                        vendor
+                        responses, and generate purchase orders. Vendors can respond to quotations with detailed rates,
+                        discounts, taxes, and delivery terms. The system also includes a messaging feature for seamless
+                        communication between buyers and vendors, along with role-based access control for employees of
+                        both
+                        buyers and vendors.
+                    </p>
+                </div>
+
+                <div class="col-md-6"> 
+                    <video src="/videos/procurement.mp4" type="video/mp4" controls width="100%"> </video>
+                    <GalleryImages :images="images" />
+
+                </div>
+            </div>
 
             <h3>Key Features</h3>
             <ol>
