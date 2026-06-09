@@ -10,6 +10,10 @@ for (let index = 1; index < 6; index++) {
     })
 
 }
+
+useSeoMeta({
+    title: 'Crypto Exchange Platform'
+})
 </script>
 
 <template>
@@ -18,8 +22,7 @@ for (let index = 1; index < 6; index++) {
             <div class="row">
                 <div class="col-md-6">
                     <h2>Crypto Exchange Platform</h2>
-                    <p><strong>Live Link</strong>: <a href="https://www.bitnasdaq.com/" target="_blank">BitNasdaq</a>
-                    </p>
+                    <p><strong>Live Link</strong>: Confidential</p>
                     <p><strong>Technologies Used</strong>: Nuxt.js, Ant Design (UI Framework), RESTful APIs, WebSocket,
                         CMS
                         Integration</p>

@@ -10,6 +10,10 @@ for (let index = 0; index < 5; index++) {
     })
 
 }
+
+useSeoMeta({
+    title: 'E-Procurement Platform'
+})
 </script>
 <template>
     <div class="container">

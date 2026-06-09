@@ -121,6 +121,9 @@ const images = ref([
 ])
 
 
+useSeoMeta({
+    title: 'School Management'
+})
 
 </script>
 

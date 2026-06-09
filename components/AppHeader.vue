@@ -5,15 +5,8 @@ import { useRoute } from 'nuxt/app'
 const route = useRoute()
 const activeHash = ref('')
 
-// Function to update the active hash based on the current URL
-const updateActiveHash = () => {
-    activeHash.value = window.location.hash
-}
-
-// Watch for route changes
+const updateActiveHash = () => { activeHash.value = window.location.hash }
 watch(() => route.fullPath, updateActiveHash)
-
-// Initialize the hash on page load
 onMounted(() => {
     updateActiveHash()
     window.addEventListener('hashchange', updateActiveHash)
@@ -21,53 +14,54 @@ onMounted(() => {
 </script>
 
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="navbar-inner">
+
+            <!-- Mobile toggler — ms-auto pushes it to the right when no brand -->
+            <button class="navbar-toggler ms-auto" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarMain"
+                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+            <!-- Links + CTA (both desktop and mobile CV live here) -->
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav mx-auto gap-1 mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <NuxtLink class="nav-link px-3" :class="{ active: activeHash === '#top-section' }"
-                            href="/#top-section">Home</NuxtLink>
+                        <NuxtLink class="nav-link" :class="{ active: activeHash === '#top-section' || activeHash === '' }" href="/#top-section">Home</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <NuxtLink class="nav-link px-3" :class="{ active: activeHash === '#about-section' }"
-                            href="/#about-section">About</NuxtLink>
+                        <NuxtLink class="nav-link" :class="{ active: activeHash === '#about-section' }" href="/#about-section">About</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <NuxtLink class="nav-link px-3" :class="{ active: activeHash === '#services-section' }"
-                            href="/#services-section">Services</NuxtLink>
+                        <NuxtLink class="nav-link" :class="{ active: activeHash === '#services-section' }" href="/#services-section">Services</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <NuxtLink class="nav-link px-3" :class="{ active: activeHash === '#skills-section' }"
-                            href="/#skills-section">Skills</NuxtLink>
+                        <NuxtLink class="nav-link" :class="{ active: activeHash === '#skills-section' }" href="/#skills-section">Skills</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <NuxtLink class="nav-link px-3" :class="{ active: activeHash === '#projects-section' }"
-                            href="/#projects-section">Projects</NuxtLink>
+                        <NuxtLink class="nav-link" :class="{ active: activeHash === '#projects-section' }" href="/#projects-section">Projects</NuxtLink>
                     </li>
                     <li class="nav-item">
-                        <NuxtLink class="nav-link px-3" :class="{ active: activeHash === '#contact-section' }"
-                            href="/#contact-section">Contact</NuxtLink>
+                        <NuxtLink class="nav-link" :class="{ active: activeHash === '#contact-section' }" href="/#contact-section">Contact</NuxtLink>
                     </li>
                 </ul>
-                <a href="/images/full-stack-web-developer-salah-ud-din-cv.pdf" download target="_blank"
-                    class="btn btn-primary text-white btn-sm d-none d-md-block ">
+
+                <!-- Desktop CV -->
+                <a href="/images/full-stack-web-developer-salah-ud-din-cv.pdf" download target="_blank" class="btn-cv d-none d-lg-inline-flex">
                     Download CV
-                    <img src="/images/download.svg" alt="">
+                    <img src="/images/download.svg" alt="" height="14">
                 </a>
+
+                <!-- Mobile CV — inside the collapse menu with top spacing -->
+                <div class="d-lg-none pt-2 pb-1 border-top mt-1">
+                    <a href="/images/full-stack-web-developer-salah-ud-din-cv.pdf" download target="_blank" class="btn-cv w-100 justify-content-center">
+                        Download CV
+                        <img src="/images/download.svg" alt="" height="14">
+                    </a>
+                </div>
             </div>
 
-
         </div>
-        <a href="/images/full-stack-web-developer-salah-ud-din-cv.pdf" download target="_blank"
-            class="btn btn-primary text-white btn-sm  d-block d-lg-none position-absolute end-0 top-0 mt-2">
-            Download CV
-            <img src="/images/download.svg" alt="">
-        </a>
     </nav>
 </template>

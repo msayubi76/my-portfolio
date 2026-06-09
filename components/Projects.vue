@@ -1,9 +1,10 @@
 <template>
-    <section class="py-4 bg-dark projects-section">
-        <h4 class="text-primary text-center">
-            <u>Projects</u>
-        </h4>
-        <h3 class="text-center">Projects I've Worked On </h3>
+    <section class="projects-section">
+        <div class="text-center mb-5">
+            <div class="section-label justify-content-center">Portfolio</div>
+            <h2 class="section-title">Projects I've Built</h2>
+            <p class="section-subtitle mx-auto mt-2">Real-world applications delivered for clients and businesses.</p>
+        </div>
 
         <!-- <div class="d-flex flex-row overflow-auto scroll-container" ref="scrollContainer" @mousedown="startDrag"
             @mousemove="onDrag" @mouseup="stopDrag" @mouseleave="stopDrag">
@@ -25,15 +26,12 @@
         <!-- <ClientOnly> -->
         <swiper-container ref="containerRef">
             <swiper-slide v-for="(project, index) in projects" :key="index">
-                <div class="py-3 px-2 pb-1 bg-black rounded-3">
+                <div class="project-card">
                     <NuxtLink :href="project.link" class="text-decoration-none">
-                        <p class="text-light text-opacity-75">
-                            {{ project.description }}
-                        </p>
-
+                        <p>{{ project.description }}</p>
                         <img :src="project.image" class="img-fluid" />
                     </NuxtLink>
-                    <h4 class="font-bold text-light text-center py-3">{{ project.name }}</h4>
+                    <h4 class="text-center py-3">{{ project.name }}</h4>
                 </div>
             </swiper-slide>
         </swiper-container>
@@ -52,7 +50,7 @@ const projects = [
         name: 'Crypto Exchange Platform',
         image: './images/exchange-image-banner.png',
         link: '/projects/crypto-exchange-platform',
-        description: "A full-featured crypto exchange platform developed  using Nuxt.js and Ant Design. Key features include P2P trading, spot/margin/futures trading, internal transfers, and decentralized deposits/withdrawals."
+        description: "A full-featured crypto exchange platform developed using Nuxt.js and Ant Design. Key features include P2P trading, spot/margin/futures trading, internal transfers, and decentralized deposits/withdrawals."
     },
     {
         name: 'PlutoPakistan',

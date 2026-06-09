@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salah ud Din - Senior Full Stack Developer</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg-main: #0F172A;
+    --bg-secondary: #020617;
+    --bg-card: #111827;
+    --bg-card-hover: #1E293B;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-body: #CBD5E1;
+    --text-muted: #64748B;
+    --accent-primary: #38BDF8;
+    --accent-hover: #0EA5E9;
+    --accent-secondary: #22C55E;
+    --border-default: #1E293B;
+    --border-soft: #334155;
+    --paper: #FFFFFF;
+    --paper-muted: #F8FAFC;
+    --ink: #0F172A;
+    --ink-soft: #334155;
+    --ink-muted: #64748B;
+  }
+
+  html { background: #E2E8F0; }
+
+  body {
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: #E2E8F0;
+    color: var(--ink-soft);
+    font-size: 12.3px;
+    line-height: 1.55;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  strong { color: var(--ink); font-weight: 700; }
+
+  .resume {
+    width: 900px;
+    min-height: 100vh;
+    margin: 24px auto;
+    background: var(--paper);
+    display: grid;
+    grid-template-columns: 282px 1fr;
+    box-shadow: 0 24px 80px rgba(15, 23, 42, 0.18);
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .sidebar {
+    background:
+      radial-gradient(circle at 94% 6%, rgba(56, 189, 248, 0.18), transparent 30%),
+      linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-main) 100%);
+    color: var(--text-body);
+    padding: 40px 26px;
+    position: relative;
+  }
+
+  .avatar {
+    width: 82px;
+    height: 82px;
+    border-radius: 24px;
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    color: var(--accent-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 18px;
+    box-shadow: 0 16px 34px rgba(56, 189, 248, 0.12);
+  }
+
+  .name {
+    color: var(--text-primary);
+    font-size: 29px;
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 8px;
+  }
+
+  .title {
+    color: var(--accent-primary);
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 24px;
+  }
+
+  .s-section { margin-top: 26px; }
+
+  .s-label {
+    color: var(--text-primary);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 800;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.22);
+    margin-bottom: 12px;
+  }
+
+  .contact-item {
+    display: flex;
+    gap: 9px;
+    align-items: flex-start;
+    color: var(--text-body);
+    font-size: 11.6px;
+    margin-bottom: 9px;
+    word-break: break-word;
+  }
+
+  .contact-item svg {
+    width: 15px;
+    min-width: 15px;
+    color: var(--accent-primary);
+    margin-top: 2px;
+  }
+
+  .skill-tag {
+    display: inline-block;
+    color: var(--text-body);
+    background: rgba(15, 23, 42, 0.45);
+    border: 1px solid rgba(56, 189, 248, 0.20);
+    border-radius: 999px;
+    padding: 4px 9px;
+    font-size: 11px;
+    font-weight: 650;
+    margin: 0 4px 7px 0;
+  }
+
+  .edu-title { color: var(--text-primary); font-size: 12.4px; font-weight: 800; margin-bottom: 4px; }
+  .edu-text { color: var(--text-secondary); font-size: 11.5px; line-height: 1.45; }
+  .edu-year { color: var(--accent-primary); font-size: 11px; font-weight: 700; margin-top: 5px; }
+  .lang-item { display: flex; justify-content: space-between; margin-bottom: 8px; color: var(--text-body); font-size: 11.7px; }
+  .lang-level { color: var(--accent-primary); font-weight: 800; font-size: 10.5px; }
+
+  .main { padding: 40px 38px; }
+
+  .summary-card {
+    background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+    border: 1px solid #DDE7F3;
+    border-left: 4px solid var(--accent-primary);
+    border-radius: 14px;
+    padding: 18px 20px;
+    color: var(--ink-soft);
+    line-height: 1.68;
+    margin-bottom: 28px;
+  }
+
+  .section { margin-bottom: 28px; }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--bg-main);
+    font-size: 11px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-bottom: 16px;
+  }
+
+  .section-title::before {
+    content: "";
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+    box-shadow: 0 0 0 5px rgba(56, 189, 248, 0.14);
+  }
+
+  .section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #DDE7F3;
+  }
+
+  .job {
+    position: relative;
+    padding: 0 0 20px 18px;
+    border-left: 2px solid #DDE7F3;
+  }
+
+  .job:last-child { padding-bottom: 0; }
+
+  .job::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background: var(--paper);
+    border: 3px solid var(--accent-primary);
+    border-radius: 50%;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 2px;
+  }
+
+  .job-title { color: var(--ink); font-size: 13.2px; font-weight: 850; line-height: 1.28; }
+  .job-date { color: var(--ink-muted); font-size: 10.9px; white-space: nowrap; font-weight: 700; margin-top: 1px; }
+  .job-company { color: var(--accent-hover); font-size: 12px; font-weight: 800; margin-bottom: 7px; }
+
+  .job ul { list-style: none; padding-left: 0; }
+  .job li {
+    position: relative;
+    color: var(--ink-soft);
+    font-size: 11.75px;
+    line-height: 1.55;
+    margin-bottom: 4px;
+    padding-left: 13px;
+  }
+
+  .job li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .project-card {
+    background: var(--paper-muted);
+    border: 1px solid #DDE7F3;
+    border-radius: 12px;
+    padding: 12px 13px;
+    break-inside: avoid;
+  }
+
+  .project-card:hover { border-color: var(--accent-primary); }
+  .project-name { color: var(--ink); font-size: 12.2px; font-weight: 850; margin-bottom: 3px; }
+  .project-tech { color: var(--accent-hover); font-size: 10.3px; font-weight: 800; margin-bottom: 6px; }
+  .project-link { color: var(--accent-hover); font-size: 10.5px; font-weight: 800; display: inline-flex; margin-bottom: 5px; }
+  .project-desc { color: var(--ink-soft); font-size: 11.15px; line-height: 1.48; }
+
+  @media print {
+    @page { size: A4; margin: 0; }
+    html, body { background: #FFFFFF; }
+    body { font-size: 10.9px; line-height: 1.44; }
+    .resume { width: 100%; min-height: 100vh; margin: 0; box-shadow: none; border-radius: 0; grid-template-columns: 31% 69%; }
+    .sidebar { padding: 28px 20px; }
+    .main { padding: 26px 28px; }
+    .avatar { width: 72px; height: 72px; border-radius: 20px; font-size: 30px; margin-bottom: 14px; }
+    .name { font-size: 26px; margin-bottom: 6px; }
+    .title { font-size: 10px; margin-bottom: 18px; }
+    .s-section { margin-top: 20px; }
+    .s-label { font-size: 9px; margin-bottom: 9px; padding-bottom: 7px; }
+    .contact-item { font-size: 10.6px; margin-bottom: 7px; }
+    .skill-tag { font-size: 9.8px; padding: 3px 7px; margin: 0 3px 5px 0; }
+    .edu-title { font-size: 11.2px; }
+    .edu-text, .lang-item { font-size: 10.2px; }
+    .edu-year, .lang-level { font-size: 9.6px; }
+    .summary-card { font-size: 10.9px; line-height: 1.5; padding: 13px 15px; margin-bottom: 18px; border-radius: 10px; }
+    .section { margin-bottom: 18px; }
+    .section-title { font-size: 9.5px; margin-bottom: 12px; gap: 8px; }
+    .job { padding: 0 0 12px 15px; }
+    .job-title { font-size: 11.5px; }
+    .job-date { font-size: 9.7px; }
+    .job-company { font-size: 10.6px; margin-bottom: 4px; }
+    .job li { font-size: 10.4px; line-height: 1.42; margin-bottom: 2px; padding-left: 11px; }
+    .job li::before { top: 6px; width: 4px; height: 4px; }
+    .projects-grid { gap: 7px; }
+    .project-card { padding: 8px 10px; border-radius: 9px; }
+    .project-name { font-size: 10.8px; margin-bottom: 2px; }
+    .project-tech { font-size: 9.2px; margin-bottom: 3px; }
+    .project-link { font-size: 9.4px; margin-bottom: 3px; }
+    .project-desc { font-size: 9.9px; line-height: 1.35; }
+    a { text-decoration: none; }
+  }
+
+  @media screen and (max-width: 920px) {
+    .resume { width: calc(100% - 24px); grid-template-columns: 1fr; }
+    .sidebar { padding: 34px 24px; }
+    .main { padding: 32px 24px; }
+    .projects-grid { grid-template-columns: 1fr; }
+    .job-header { display: block; }
+    .job-date { margin: 4px 0 0; }
+  }
+</style>
+</head>
+<body>
+<div class="resume">
+  <aside class="sidebar">
+    <div class="avatar">S</div>
+    <h1 class="name">Salah<br>ud Din</h1>
+    <p class="title">Senior Full Stack Developer</p>
+
+    <div class="s-section">
+      <div class="s-label">Contact</div>
+      <div class="contact-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 1.5C5.5 1.5 3.5 3.5 3.5 6c0 3.5 4.5 8.5 4.5 8.5s4.5-5 4.5-8.5c0-2.5-2-4.5-4.5-4.5z"/><circle cx="8" cy="6" r="1.5"/></svg><span>Islamabad, Pakistan</span></div>
+      <div class="contact-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5"/><path d="M1.5 5l6.5 4 6.5-4"/></svg><a href="mailto:msayubi76@gmail.com">msayubi76@gmail.com</a></div>
+      <div class="contact-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 2h3l1.5 3.5-1.5 1a8 8 0 003.5 3.5l1-1.5L14 10v3a1 1 0 01-1 1A11 11 0 012 3a1 1 0 011-1z"/></svg><span>+923437239678</span></div>
+      <div class="contact-item"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6"/><path d="M8 2a8 8 0 010 12M8 2a8 8 0 000 12M2 8h12"/></svg><a href="https://salahuddin.pk" target="_blank">salahuddin.pk</a></div>
+      <div class="contact-item"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M13.5 2h-11A.5.5 0 002 2.5v11a.5.5 0 00.5.5H9v-5H7V7h2V5.5C9 3.6 10.1 2.5 12 2.5c.9 0 1.7.1 1.9.1V5h-1.3c-1 0-1.2.5-1.2 1.2V7h2.4l-.3 2H11v5h2.5a.5.5 0 00.5-.5v-11a.5.5 0 00-.5-.5z"/></svg><a href="https://linkedin.com/in/msayubi76" target="_blank">linkedin.com/in/msayubi76</a></div>
+    </div>
+
+    <div class="s-section">
+      <div class="s-label">Core Skills</div>
+      <span class="skill-tag">Vue.js</span>
+      <span class="skill-tag">Nuxt.js v2/v3/v4</span>
+      <span class="skill-tag">JavaScript ES6+</span>
+      <span class="skill-tag">Laravel 12</span>
+      <span class="skill-tag">PHP 8.2+</span>
+      <span class="skill-tag">MySQL</span>
+      <span class="skill-tag">REST APIs</span>
+      <span class="skill-tag">AWS EC2</span>
+      <span class="skill-tag">AWS Lambda</span>
+      <span class="skill-tag">DynamoDB</span>
+      <span class="skill-tag">Amplify</span>
+      <span class="skill-tag">Tailwind CSS</span>
+      <span class="skill-tag">Ant Design</span>
+      <span class="skill-tag">WebSocket</span>
+      <span class="skill-tag">Multi-tenant SaaS</span>
+      <span class="skill-tag">Git / CI-CD</span>
+      <span class="skill-tag">Inertia.js</span>
+      <span class="skill-tag">AI Tools</span>
+    </div>
+
+    <div class="s-section">
+      <div class="s-label">Education</div>
+      <div class="edu-title">BS Computer Science</div>
+      <div class="edu-text">Federal Urdu University of Arts, Sciences & Technology, Islamabad</div>
+      <div class="edu-year">2020 - GPA 3.0</div>
+    </div>
+
+    <div class="s-section">
+      <div class="s-label">Languages</div>
+      <div class="lang-item"><span>Urdu</span><span class="lang-level">Native</span></div>
+      <div class="lang-item"><span>English</span><span class="lang-level">Professional</span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <p class="summary-card">
+      Results-driven Senior Full Stack Developer with <strong>6+ years</strong> of experience delivering scalable web applications across fintech, blockchain, hospitality, transport, and e-government domains. Proven track record leading Vue.js / Nuxt.js frontend teams, architecting Laravel REST APIs, and managing AWS infrastructure including EC2, Amplify, Lambda, and DynamoDB. Built a WhatsApp-style real-time chat system and led crypto exchange frontend delivery at BNQ Global. Operated as sole developer on multiple end-to-end SaaS products and uses AI-assisted development tools to accelerate delivery.
+    </p>
+
+    <section class="section">
+      <h2 class="section-title">Experience</h2>
+
+      <div class="job">
+        <div class="job-header"><span class="job-title">Senior Frontend Developer & Web Team Lead</span><span class="job-date">May 2023 - Present</span></div>
+        <div class="job-company">Digital Code Pvt Ltd - Islamabad</div>
+        <ul>
+          <li>Lead frontend team on <a href="https://bnqglobal.com" target="_blank">BNQ Global</a>, a live crypto exchange with Spot, Margin, P2P, Copy Trade, and Futures Perpetual trading.</li>
+          <li>Built Advanced Trading View module integrating TradingView charting with real-time WebSocket order-book and price feeds.</li>
+          <li>Architected a WhatsApp-style real-time chat system via AWS Lambda and DynamoDB supporting 1-1 chat, private/public groups, communities, and verified groups.</li>
+          <li>Delivered P2P Trading module end-to-end: order matching UI, escrow status flows, and dispute management screens.</li>
+          <li>Implemented Copy Trade feature allowing users to mirror experienced traders in real time.</li>
+          <li>Used AWS Amplify for hosting/CD, DynamoDB for low-latency data, and Lambda for serverless backend functions.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header"><span class="job-title">Full Stack Developer - Sole Engineer</span><span class="job-date">2022 - 2024</span></div>
+        <div class="job-company">Pluto Pakistan - Remote</div>
+        <ul>
+          <li>Solely responsible for the full technical stack of plutopakistan.com: Vue.js frontend, Laravel REST API backend, and server infrastructure.</li>
+          <li>Managed deployments across Namecheap and AWS, including DNS, SSL, and release pipelines.</li>
+          <li>Project paused due to client budget constraints; codebase and infrastructure were fully handed over.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header"><span class="job-title">Full Stack Developer - Solo Build</span><span class="job-date">2024 - Present</span></div>
+        <div class="job-company">Vehicle Owner Local Transport System - Islamabad</div>
+        <ul>
+          <li>Designed and built a multi-tenant SaaS platform for local goods transport businesses using Laravel 12, Nuxt 4, MySQL, and Tailwind CSS.</li>
+          <li>Implemented strict multi-tenancy with complete data isolation per tenant, role-based access, and subscription plan enforcement.</li>
+          <li>Built a double-entry ledger/accounting backbone with financial locks and approval workflows covering vouchers, fuel entries, salary advances, and settlements.</li>
+          <li>Developed core operations modules for vehicles, drivers, conductors, customers, partners with ownership share history, and document uploads.</li>
+          <li>Added Urdu RTL + English i18n, Dark/Light/System theming with tenant brand colors, and report/export foundations.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header"><span class="job-title">Senior Full Stack Developer</span><span class="job-date">Sep 2022 - Apr 2023</span></div>
+        <div class="job-company">Signup Solution Pvt Ltd - Islamabad</div>
+        <ul>
+          <li>Developed core modules of a Hotel Management SaaS: Bookings & Billing, Analytics Dashboard, Dynamic Services, and multi-level access control.</li>
+          <li>Designed RESTful APIs in Laravel consumed by a Vue.js SPA and re-architected invoice generation logic to eliminate billing errors.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header"><span class="job-title">Full Stack Engineer & Team Lead</span><span class="job-date">Jun 2021 - Sep 2022</span></div>
+        <div class="job-company">Procurosis Pvt Ltd - Islamabad</div>
+        <ul>
+          <li>Led development of a multi-tenant B2B procurement SaaS covering RFQ, quotation, real-time chat, and Purchase Order generation.</li>
+          <li>Architected multi-tier subscription model from Free to Enterprise and managed a team of 5 engineers on AWS EC2 and Route 53.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header"><span class="job-title">Software Engineer</span><span class="job-date">Jun 2020 - May 2021</span></div>
+        <div class="job-company">Global Gateway Services - Islamabad</div>
+        <ul>
+          <li>Sole developer of E-Bidding and E-Auction systems deployed across 4 KPK government boards: Kohat, Mardan, Bannu, and D.I. Khan.</li>
+          <li>Built tender form generation, company rate quoting, max-rate highlighting, tender closing, and ineligibility marking.</li>
+          <li>Delivered 6 client projects on schedule including Finanspan, ZDigi Promo, and JDM-Trading e-commerce.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Notable Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card"><div class="project-name">BNQ Global - Crypto Exchange</div><div class="project-tech">Vue.js - Ant Design - WebSocket - AWS Lambda - DynamoDB</div><a class="project-link" href="https://salahuddin.pk/projects/crypto-exchange-platform" target="_blank">View Project</a><div class="project-desc">Full-featured exchange with Spot, Margin, P2P, Copy Trade, and Futures. WhatsApp-style real-time chat via Lambda + DynamoDB.</div></div>
+        <div class="project-card"><div class="project-name">Pluto Pakistan</div><div class="project-tech">Laravel - Vue.js - MySQL - AWS - Namecheap</div><a class="project-link" href="https://salahuddin.pk/projects/pluto-pakistan" target="_blank">View Project</a><div class="project-desc">Sole engineer for plutopakistan.com, owning frontend, backend API, and server infrastructure across AWS and Namecheap.</div></div>
+        <div class="project-card"><div class="project-name">Vehicle Owner Local Transport SaaS</div><div class="project-tech">Laravel 12 - Nuxt 4 - MySQL - Tailwind CSS</div><div class="project-desc">Multi-tenant SaaS with data isolation, double-entry ledger, voucher/fuel/salary systems, Urdu RTL support, and Dark/Light theming.</div></div>
+        <div class="project-card"><div class="project-name">Procurosis - B2B Procurement SaaS</div><div class="project-tech">Laravel - Vue.js - MySQL - AWS EC2</div><a class="project-link" href="https://salahuddin.pk/projects/e-procurement" target="_blank">View Project</a><div class="project-desc">Multi-tenant RFQ, quotation, real-time chat, and PO generation platform. Led a team of 5 engineers.</div></div>
+        <div class="project-card"><div class="project-name">E-Bidding / E-Auction - KPK Boards</div><div class="project-tech">Laravel - PHP - jQuery</div><div class="project-desc">Sole developer for tender management systems across 4 KPK government boards with rate quoting and eligibility management.</div></div>
+        <div class="project-card"><div class="project-name">LamaGogo - Pet Hospitality</div><div class="project-tech">Laravel - Vue.js / Inertia.js - AWS</div><div class="project-desc">Multi-vendor pet boarding platform with registrations, reservations, payments, and calendar-based dorm availability.</div></div>
+        <div class="project-card"><div class="project-name">JDM Trading - E-Commerce</div><div class="project-tech">Laravel - PHP - jQuery</div><a class="project-link" href="https://salahuddin.pk/projects/jdm-trading" target="_blank">View Project</a><div class="project-desc">Category-wise stock management with customer ordering, order tracking dashboard, and full database design.</div></div>
+        <div class="project-card"><div class="project-name">School Management System</div><div class="project-tech">Laravel - PHP</div><a class="project-link" href="https://salahuddin.pk/projects/school-management" target="_blank">View Project</a><div class="project-desc">Complete system covering admissions, fee collection, exam scheduling, class promotion, and role-based access.</div></div>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>

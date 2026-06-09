@@ -15,6 +15,11 @@ for (let index = 4; index < 9; index++) {
         src: `${config.app.baseURL}images/jdm-${index}.png`
     })
 }
+
+
+useSeoMeta({
+    title: 'Jdm-Trading Car Stock'
+})
 </script>
 <template>
 

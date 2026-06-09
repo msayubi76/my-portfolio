@@ -1,9 +1,10 @@
 <template>
-    <section class="bg-dark px-3 py-4">
-        <h4 class="text-primary text-center">
-            <u>Services</u>
-        </h4>
-        <h3 class="text-center">What I Do?</h3>
+    <section class="px-3 py-5">
+        <div class="text-center mb-5">
+            <div class="section-label justify-content-center">What I Do</div>
+            <h2 class="section-title">Services I Offer</h2>
+            <p class="section-subtitle mx-auto mt-2">Specialized in building full-stack solutions end-to-end.</p>
+        </div>
         <div class="">
             <swiper-container ref="containerRef">
                 <swiper-slide>

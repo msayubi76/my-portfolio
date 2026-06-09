@@ -1,79 +1,37 @@
 <template>
-    <section class="py-4">
-        <h4 class="text-primary text-center">
-            <u>My Expertise</u>
-        </h4>
-        <h3 class="text-center">I'm Proficient In
-        </h3>
+    <section class="py-5">
+        <div class="text-center mb-5">
+            <div class="section-label justify-content-center">Technical Expertise</div>
+            <h2 class="section-title">Skills &amp; Technologies</h2>
+            <p class="section-subtitle mx-auto mt-2" style="color:#6B7280;">
+                Tools and technologies I use to build robust, scalable applications.
+            </p>
+        </div>
 
-
-        <div class="row mt-5">
-            <div class="col-md-2 col-sm-3 col-4 mb-3" v-for="(skill, index) in skills" :key="index">
-                <ProgressCircle :progress="skill.progress" :text="skill.name" :color="skill.color"/>
+        <div class="row g-3">
+            <div class="col-lg-2 col-md-3 col-sm-4 col-6" v-for="(skill, index) in skills" :key="index">
+                <div class="skill-badge">
+                    <span class="skill-name">{{ skill.name }}</span>
+                    <span class="skill-category">{{ skill.category }}</span>
+                </div>
             </div>
         </div>
     </section>
-
 </template>
 
 <script setup>
-
 const skills = ref([
-    {
-        name: 'VueJs/NuxtJs',
-        progress: 85,
-        color:'#49a900'
-    },
-    {
-        name: 'Laravel',
-        progress: 85,
-        color:'#49a900'
-    },
-    {
-        name: 'Aws',
-        progress: 40,
-        color:'#49a900'
-    },
-    {
-        name: 'MySql',
-        progress: 70,
-        color:'#49a900'
-    },
-    {
-        name: 'Git',
-        progress: 70,
-        color:'#f26b50'
-    },
-    {
-        name: 'JQuery',
-        progress: 75,
-        color:'#f26b50'
-    },
-    {
-        name: 'Linux-Shell',
-        progress: 35,
-        color:'#f26b50'
-    },
-    {
-        name: 'Restfull Api',
-        progress: 90,
-        color:'#f26b50'
-    },
-    {
-        name: 'Bootstrap',
-        progress: 90,
-        color:'#49a900'
-    },
-    {
-        name: 'Scss',
-        progress: 80,
-        color:'#f26b50'
-    },
-    {
-        name: 'Sass',
-        progress: 80,
-        color:'#f26b50'
-    },
+    { name: 'Vue.js / Nuxt.js', category: 'Frontend' },
+    { name: 'Laravel / PHP',    category: 'Backend' },
+    { name: 'RESTful APIs',     category: 'API Dev' },
+    { name: 'MySQL',            category: 'Database' },
+    { name: 'AWS',              category: 'Cloud' },
+    { name: 'Git',              category: 'Version Control' },
+    { name: 'Bootstrap / SCSS', category: 'UI Styling' },
+    { name: 'jQuery',           category: 'JavaScript' },
+    { name: 'Pusher / Echo',    category: 'Real-time' },
+    { name: 'Linux / Shell',    category: 'DevOps' },
+    { name: 'Inertia.js',       category: 'Full-Stack' },
+    { name: 'Pinia / Vuex',     category: 'State Mgmt' },
 ])
-
 </script>

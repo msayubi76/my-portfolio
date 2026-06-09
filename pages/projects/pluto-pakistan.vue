@@ -10,6 +10,10 @@ for (let index = 1; index < 5; index++) {
     })
 
 }
+
+useSeoMeta({
+    title: 'Plutopakistan'
+})
 </script>
 <template>
     <div class="container">
