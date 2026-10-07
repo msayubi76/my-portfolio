@@ -1,0 +1,27 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "3005"
+      ],
+      "port": 3005
+    },
+    {
+      "name": "portfolio-static",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "C:/Users/msayu/AppData/Local/Temp/claude/C--Users-msayu-Downloads-portfolio-salahuddin-portfolio-final-v3-salahuddin-portfolio-nuxt/74a0d2f4-7f82-4d2a-9c7a-5b714cbcebd4/scratchpad/static.mjs",
+        ".output/public",
+        "4173"
+      ],
+      "port": 4173
+    }
+  ]
+}

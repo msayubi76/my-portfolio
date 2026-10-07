@@ -1,0 +1,20 @@
+# Used only on Apache/cPanel hosting; ignored elsewhere.
+ErrorDocument 404 /404.html
+DirectorySlash On
+
+# Old salahuddin.pk URLs that are still linked from GitHub/LinkedIn
+RedirectMatch 301 ^/projects/e-procurement/?$ /work/procurosis
+RedirectMatch 301 ^/projects(/.*)?$ /#work
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "^_nuxt/">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html|json)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

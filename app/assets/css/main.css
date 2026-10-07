@@ -1,0 +1,213 @@
+@import "@fontsource-variable/inter/wght.css";
+@import "tailwindcss";
+
+@custom-variant theme-dark (&:where(.theme-dark, .theme-dark *));
+
+:root {
+  color-scheme: light;
+  --bg: #f8fafc;
+  --bg-soft: #f1f5f9;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --surface-3: #e9eef5;
+  --text: #101828;
+  --muted: #475467;
+  --muted-2: #667085;
+  --border: rgba(15, 23, 42, 0.10);
+  --border-strong: rgba(15, 23, 42, 0.18);
+  --accent: #0f766e;
+  --accent-2: #6d4aff;
+  --accent-3: #b85c00;
+  --success: #16803d;
+  --nav-bg: rgba(248, 250, 252, 0.88);
+  --shadow-soft: 0 18px 55px rgba(15, 23, 42, 0.08);
+  --shadow-card: 0 10px 34px rgba(15, 23, 42, 0.07);
+}
+
+html.theme-dark {
+  color-scheme: dark;
+  --bg: #080c15;
+  --bg-soft: #0d1320;
+  --surface: #101827;
+  --surface-2: #131e30;
+  --surface-3: #1a2940;
+  --text: #f8fafc;
+  --muted: #a8b3c4;
+  --muted-2: #7f8da3;
+  --border: rgba(179, 197, 223, 0.14);
+  --border-strong: rgba(179, 197, 223, 0.24);
+  --accent: #51d5ca;
+  --accent-2: #a78bfa;
+  --accent-3: #ffb86b;
+  --success: #75e6a4;
+  --nav-bg: rgba(8, 12, 21, 0.84);
+  --shadow-soft: 0 22px 70px rgba(0, 0, 0, 0.28);
+  --shadow-card: 0 14px 42px rgba(0, 0, 0, 0.20);
+}
+
+@theme {
+  --font-sans: "Inter Variable", Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 92px;
+    background: var(--bg);
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.65;
+    letter-spacing: -0.005em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  strong {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--accent) 22%, transparent);
+    color: var(--text);
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--accent) 32%, transparent);
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+  }
+
+  .no-print,
+  .site-header,
+  .site-footer {
+    display: none !important;
+  }
+
+  .resume-page {
+    padding: 0 !important;
+  }
+
+  .resume-sheet {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+  }
+
+  .resume-sheet * {
+    color: #111827 !important;
+    border-color: #d1d5db !important;
+  }
+
+  .resume-sheet a {
+    text-decoration: none !important;
+  }
+
+  .resume-sheet > header {
+    padding-bottom: 12px !important;
+    gap: 8px !important;
+  }
+
+  .resume-sheet > header h1 {
+    font-size: 30px !important;
+  }
+
+  .resume-sheet > header > div:last-child {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 2px 14px !important;
+    text-align: left !important;
+    font-size: 12px !important;
+  }
+
+  .resume-sheet > section {
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    break-inside: auto;
+  }
+
+  .resume-sheet p,
+  .resume-sheet li {
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+  }
+
+  .resume-sheet article {
+    break-inside: avoid;
+  }
+
+  .resume-sheet section > div.grid {
+    margin-top: 8px !important;
+    gap: 10px !important;
+  }
+}
+
+/* PhotoSwipe lightbox caption (registered in composables/useLightbox.ts) */
+.pswp__caption {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  width: min(calc(100% - 32px), 760px);
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(8, 12, 21, 0.72);
+  color: #f8fafc;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.45;
+  text-align: center;
+  pointer-events: none;
+}
+
+.pswp__caption:empty {
+  display: none;
+}
